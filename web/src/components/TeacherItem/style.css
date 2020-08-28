@@ -1,0 +1,148 @@
+#page-teacher-list main {
+  margin: 3.2rem auto;
+  width: 90%;
+}
+
+.teacher-item {
+  background-color: var(--color-box-base);
+  border: 1px solid var(--color-line-in-white);
+  margin-top: 2.4rem;
+  border-radius: 8px;
+}
+
+.teacher-item header img {
+  height: 80px;
+  border-radius: 50%;
+}
+
+.teacher-item header {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 2rem;
+}
+
+.teacher-item header div {
+  margin-left: 2.4rem;
+}
+
+.teacher-item header div strong {
+  display: block !important;
+  color: var(--color-text-title);
+  font: 700 2.4rem Archivo;
+}
+
+.teacher-item header div span {
+  display: block;
+  color: var(--color-text-base);
+  font: 500 1.6rem Poppins;
+  margin-top: 0.5rem;
+}
+
+.teacher-item > p {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.teacher-item p {
+  margin-top: -1.4rem;
+  line-height: 3rem;
+  color: var(--color-text-base);
+  padding: 2.2rem;
+}
+
+.teacher-item footer {
+  width: 100%;
+  padding: 1.5em;
+  border-top: 1px solid var(--color-line-in-white);
+  background-color: var(--color-box-footer);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-item footer a {
+  display: flex;
+  padding: 1.5rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font: 700 1.4rem Archivo;
+  background-color: var(--color-secundary);
+  color: white;
+  cursor: pointer;
+  transition: 200ms;
+
+  box-sizing: border-box;
+}
+
+.teacher-item footer a img {
+    margin-right: 0.4rem;
+}
+
+.teacher-item footer a:hover {
+  background-color: var(--color-secundary-dark);
+}
+
+footer p strong {
+  display: block;
+  font: 600 2rem Archivo;
+  color: var(--color-primary);
+}
+
+footer p {
+  display: block;
+  color: var(--color-text-complement);
+  font-size: 1.4rem;
+  padding: 0 !important;
+}
+
+@media (min-width: 700px) {
+  #page-teacher-list {
+    max-width: 100vw;
+  }
+
+  #page-teacher-list main {
+    padding: 32px 0;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .teacher-item header,
+  .teacher-item footer {
+    padding: 3.2rem;
+  }
+
+  .teacher-item > p {
+    padding: 0 3.2rem;
+  }
+
+  .teacher-item footer a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20rem;
+      padding: 2rem;
+      font-size: 1.6rem !important;
+  }
+
+  .teacher-item footer a img {
+      margin-left: 1rem;
+      margin-right: 0;
+  }
+
+  .teacher-item footer p a {
+    display: initial;
+    margin-left: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .teacher-item footer a {
+    width: 24.5rem;
+    font-size: 1em;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,44 @@
+.textarea-block {
+  position: relative;
+}
+
+.textarea-block + .textarea-block {
+  margin-top: 1.4rem;
+}
+
+.textarea-block:last-child {
+  margin-bottom: 2rem;
+}
+
+.textarea-block textarea {
+  border-radius: 8px;
+  background-color: var(--color-box-footer);
+  border: none;
+  border: 1px solid #e6e6f0;
+  width: 100%;
+  height: 16rem;
+  outline: 0;
+  padding: 1.2rem 1.6rem;
+  resize: vertical;
+  margin-top: 0.8rem;
+  font: 1.6rem Archivo;
+}
+
+/*  .textarea-block:focus-within::after {
+  textarea-block quanto tiver focus no input 
+  width: 80%;
+  text-align: center;
+  height: 0.5px;
+  content: "";
+  background: var(--color-primary-light);
+  position: absolute;
+  left: 2rem;
+  right: 1.6rem;
+  bottom: 1.5rem;
+} */
+
+@media (min-width: 700px) {
+  .textarea-block + .textarea-block {
+    margin: 0;
+  }
+}

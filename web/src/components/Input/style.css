@@ -1,0 +1,43 @@
+.input-block {
+  position: relative;
+}
+
+.input-block + .input-block {
+  margin-top: 1.4rem;
+}
+
+.input-block:last-child {
+  margin-bottom: 2rem;
+}
+
+.input-block input {
+  border-radius: 8px;
+  background-color: var(--color-box-footer);
+  border: none;
+  border: 1px solid #e6e6f0;
+  width: 100%;
+  height: 5.6rem;
+  outline: 0;
+  padding: 0 1.6rem;
+  margin-top: 0.8rem;
+  font: 1.6rem Archivo;
+}
+
+/*  .input-block:focus-within::after {
+  input-block quanto tiver focus no input 
+  width: 80%;
+  text-align: center;
+  height: 0.5px;
+  content: "";
+  background: var(--color-primary-light);
+  position: absolute;
+  left: 2rem;
+  right: 1.6rem;
+  bottom: 1.5rem;
+} */
+
+@media (min-width: 700px) {
+  .input-block + .input-block {
+    margin: 0;
+  }
+}
