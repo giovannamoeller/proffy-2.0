@@ -4,9 +4,9 @@ const connection = knex({
     client: 'pg',
     connection: {
       host : 'localhost',
-      user : 'giovannamoeller',
-      password : '',
-      database : 'proffys'
+      user : 'postgres',
+      password : 'docker',
+      database : 'proffy'
     }
 });
 
