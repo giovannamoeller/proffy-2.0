@@ -22,13 +22,16 @@ const Cadastro = () => {
 
   return (
     <div id="landing-page">
-      <ProffyPage/>
+
 
       <div className="login">
         <div className="login-form">
-          <h1>Fazer login</h1>
+          <h1>Cadastro</h1>
+          <p>Preencha os dados abaixo para começar.</p>
           <form action="">
             <fieldset>
+              <input type="text" placeholder="Nome" />
+              <input type="text" placeholder="Sobrenome" />
               <input type="email" placeholder="E-mail" />
               <div>
                 {hiddenPassword ? 
@@ -38,29 +41,13 @@ const Cadastro = () => {
                 {hiddenPassword ? <input type="password" placeholder="Senha"/> : <input type="text" placeholder="Senha"/>}
               </div>
             </fieldset>
-            <section className="form-footer">
-              <div>
-                <label htmlFor="rememberMe">Lembrar-me
-                    <input type="checkbox" id="rememberMe"/>
-                    <span className="checkmark"></span>
-                </label>
-              </div>
-              
-            </section>
-            <button type="submit">Entrar</button>
+            <Link to='/success-sign-up'>
+              <button type="submit">Concluir Cadastro</button>
+            </Link>
           </form>
-          <div className="footer">
-            <div>
-              <p>Não tem uma conta?</p>
-              <a href="#">Cadastre-se</a>
-            </div>
-            <div>
-              <p>É de graça</p>
-              <img src={purpleHeartIcon} />
-            </div>
-          </div>
         </div>
       </div>
+      <ProffyPage/>
     </div>
   );
 };

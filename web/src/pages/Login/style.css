@@ -29,7 +29,6 @@
     border: 1px solid var(--color-line-in-white);
     border-radius: 8px;
     margin-bottom: 5rem;
-    background-color: var(--color-box-footer);
     position: relative;
 }
 
@@ -43,6 +42,7 @@
     font-weight: 300;
     font-size: 1.6rem;
     color: var(--color-text-base);
+    background-color: var(--color-box-footer);
 }
 
 .login-form fieldset img {
@@ -68,7 +68,7 @@
 }
 
 .login-form fieldset input::placeholder {
-    font-weight: normal;
+    font-weight: 300;
     color: var(--color-text-complement);
 }
 

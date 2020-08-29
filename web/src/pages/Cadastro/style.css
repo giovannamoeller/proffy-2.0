@@ -17,7 +17,16 @@
     font-weight: 600;
     font-size: 3.6rem;
     color: var(--color-text-title);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+}
+
+.login-form p {
+    font-weight: 300;
+    color: var(--color-text-base);
+    width: 220px;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 3rem;
 }
 
 .login-form {
@@ -29,7 +38,6 @@
     border: 1px solid var(--color-line-in-white);
     border-radius: 8px;
     margin-bottom: 5rem;
-    background-color: var(--color-box-footer);
     position: relative;
 }
 
@@ -43,12 +51,13 @@
     font-weight: 300;
     font-size: 1.6rem;
     color: var(--color-text-base);
+    background-color: var(--color-box-footer);
 }
 
 .login-form fieldset img {
     position: absolute;
     right: 1rem;
-    top: 65%;
+    top: 85%;
     cursor: pointer;
 }
 
@@ -68,13 +77,13 @@
 }
 
 .login-form fieldset input::placeholder {
-    font-weight: normal;
+    font-weight: 300;
     color: var(--color-text-complement);
 }
 
 .login-form form button {
-    background-color: #DCDCE6;
-    color: var(--color-text-complement);
+    background-color: var(--color-secundary);
+    color: white;
     border-radius: 8px;
     padding: 16px;
     width: 100%;
@@ -82,105 +91,10 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .login-form form button:hover {
     background-color: var(--color-secundary-dark);
     color: white;
-}
-
-.login-form .form-footer input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.login-form .form-footer div {
-    position: relative;
-}
-
-.login-form .form-footer .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: var(--color-secundary);
-    border-radius: 6px;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-  
-  /* Show the checkmark when checked */
-.login-form .form-footer div label input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the checkmark/indicator */
-.login-form .form-footer div label .checkmark:after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-.login-form .form-footer a {
-    text-decoration: none;
-    color: var(--color-text-complement);
-    font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-}
-
-.login-form .form-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-text-complement);
-    font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-}
-
-.login-form .form-footer div label {
-    margin-left: 3rem;
-}
-
-.login-form .footer {
-    color: var(--color-text-complement);
-    font-weight: normal;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin-top: 20vh;
-}
-
-.login-form .footer div:nth-child(1) {
-    font-size: 1.6rem;
-    color: var(--color-text-base);
-}
-
-.login-form .footer div:nth-child(1) a {
-    margin-top: 10px;
-    color: var(--color-primary-darker);
-    font-weight: 500;
-}
-
-.login-form .footer div:nth-child(2) {
-    display: flex;
-    align-self: center;
-    justify-content: space-evenly;
-    font-size: 1.2rem;
-    font-weight: normal;
 }
