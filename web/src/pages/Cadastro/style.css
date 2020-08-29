@@ -5,7 +5,7 @@
     grid-template-columns: 1.1fr 0.9fr;
 }
 
-.login {
+.create {
     background-color: var(--color-background);
     display: flex;
     align-items: center;
@@ -13,14 +13,14 @@
     font-weight: normal;
 }
 
-.login-form h1 {
+.create-form h1 {
     font-weight: 600;
     font-size: 3.6rem;
     color: var(--color-text-title);
     margin-bottom: 2rem;
 }
 
-.login-form p {
+.create-form p {
     font-weight: 300;
     color: var(--color-text-base);
     width: 220px;
@@ -29,19 +29,19 @@
     margin-bottom: 3rem;
 }
 
-.login-form {
+.create-form {
     width: 60%;
     max-height: 70vh;
 }
 
-.login-form fieldset {
+.create-form fieldset {
     border: 1px solid var(--color-line-in-white);
     border-radius: 8px;
     margin-bottom: 5rem;
     position: relative;
 }
 
-.login-form fieldset input {
+.create-form fieldset input {
     display: block;
     border: none;
     padding: 24px;
@@ -54,34 +54,34 @@
     background-color: var(--color-box-footer);
 }
 
-.login-form fieldset img {
+.create-form fieldset img {
     position: absolute;
     right: 1rem;
     top: 85%;
     cursor: pointer;
 }
 
-.login-form fieldset input:focus-within::after {
+.create-form fieldset input:focus-within::after {
     content: '';
     position: absolute;
     height: 10px;
     top: 0;
 }
 
-.login-form fieldset input:first-child {
+.create-form fieldset input:first-child {
     border-radius: 8px 8px 0 0;
 }
 
-.login-form fieldset input:last-child {
+.create-form fieldset input:last-child {
     border-radius: 0 0 8px 8px;
 }
 
-.login-form fieldset input::placeholder {
+.create-form fieldset input::placeholder {
     font-weight: 300;
     color: var(--color-text-complement);
 }
 
-.login-form form button {
+.create-form form button {
     background-color: var(--color-secundary);
     color: white;
     border-radius: 8px;
@@ -94,7 +94,7 @@
     margin-top: 3rem;
 }
 
-.login-form form button:hover {
+.create-form form button:hover {
     background-color: var(--color-secundary-dark);
     color: white;
 }

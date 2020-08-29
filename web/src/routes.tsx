@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
 import Cadastro from './pages/Cadastro';
+import SuccessCadastro from './pages/Success-Cadastro';
 
 export default function Routes() {
     return(
@@ -13,6 +14,7 @@ export default function Routes() {
             <Route path="/study" component={TeacherList} exact/>
             <Route path="/give-classes" component={TeacherForm} exact/>
             <Route path="/sign-up" component={Cadastro} exact/>
+            <Route path="/success-sign-up" component={SuccessCadastro} exact/>
         </BrowserRouter>
     )
 }

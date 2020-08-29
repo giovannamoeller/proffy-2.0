@@ -22,10 +22,8 @@ const Cadastro = () => {
 
   return (
     <div id="landing-page">
-
-
-      <div className="login">
-        <div className="login-form">
+      <div className="create">
+        <div className="create-form">
           <h1>Cadastro</h1>
           <p>Preencha os dados abaixo para começar.</p>
           <form action="">

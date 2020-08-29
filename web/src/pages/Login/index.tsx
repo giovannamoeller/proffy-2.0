@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import showPassword from "../../assets/images/icons/show-password.svg";
 import hidePassword from "../../assets/images/icons/hide-password.svg";
 import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
-import "./style.css";
+import "./style.css"
 import "../../assets/styles/global.css";
 
 import ProffyPage from '../../components/ProffyPage';
-import Cadastro from '../Cadastro';
 
 import api from "../../services/api";
 
@@ -47,7 +46,7 @@ const Login = () => {
                 </label>
               </div>
               <Link to="/forgot-password">
-                  Esqueci minha senha
+                <a href="#">Esqueci minha senha</a>
               </Link>
             </section>
             <button type="submit">Entrar</button>
@@ -56,7 +55,7 @@ const Login = () => {
             <div>
               <p>Não tem uma conta?</p>
               <Link to="/sign-up">
-                  Cadastre-se
+                  <a href="#">Cadastre-se</a>
               </Link>
             </div>
             <div>

@@ -1,0 +1,49 @@
+#landing {
+    height: 100vh;
+    width: 100vw;   
+    background-color: var(--color-primary);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing div {
+    text-align: center;
+}
+#landing img {
+    margin-bottom: 3rem;
+}
+
+#landing h1 {
+    font-family: 'Archivo';
+    font-size: 5.4rem;
+    color: white;
+    line-height: 4.2rem;
+    margin-bottom: 3rem;
+}
+
+#landing p {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-text-in-primary);
+    text-align: center;
+    margin-bottom: 15rem;
+}
+
+#landing a {
+    background-color: var(--color-secundary);
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    font: 400 1.6rem Archivo;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+

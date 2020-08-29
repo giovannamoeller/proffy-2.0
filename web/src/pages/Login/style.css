@@ -22,7 +22,7 @@
 
 .login-form {
     width: 60%;
-    max-height: 70vh;
+    max-height: 60vh;
 }
 
 .login-form fieldset {
@@ -45,10 +45,10 @@
     background-color: var(--color-box-footer);
 }
 
-.login-form fieldset img {
+.login-form fieldset div img {
     position: absolute;
     right: 1rem;
-    top: 65%;
+    top: 70%;
     cursor: pointer;
 }
 
@@ -163,7 +163,7 @@
     font-weight: normal;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 .login-form .footer div:nth-child(1) {
@@ -172,15 +172,14 @@
 }
 
 .login-form .footer div:nth-child(1) a {
-    margin-top: 10px;
     color: var(--color-primary-darker);
     font-weight: 500;
 }
 
 .login-form .footer div:nth-child(2) {
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: space-evenly;
-    font-size: 1.2rem;
+    font-size: 12px;
     font-weight: normal;
 }
