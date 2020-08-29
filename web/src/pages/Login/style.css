@@ -1,0 +1,24 @@
+#landing-page {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.proffy {
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-primary);
+    color: var(--color-text-in-primary);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.login {
+    background-color: var(--color-background);
+}
+
+
+
