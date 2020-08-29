@@ -22,7 +22,7 @@ const Landing = () => {
     }, []);
 
   return (
-        <div id="landing-page">
+        <div id="home-page">
             <div id="page-landing-content" className="container">
                 <div className="logo-container">
                     <img src={logo} alt="Logo"/>

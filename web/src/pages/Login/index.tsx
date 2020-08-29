@@ -4,25 +4,24 @@ import { Link } from "react-router-dom";
 import showPassword from "../../assets/images/icons/show-password.svg";
 import hidePassword from "../../assets/images/icons/hide-password.svg";
 import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
-import "./style.css"
+import "./style.css";
 import "../../assets/styles/global.css";
 
-import ProffyPage from '../../components/ProffyPage';
+import ProffyPage from "../../components/ProffyPage";
 
 import api from "../../services/api";
 
 const Login = () => {
+  const [hiddenPassword, setHiddenPassword] = useState(true);
 
-    const [hiddenPassword, setHiddenPassword] = useState(true);
-    
-    function changePasswordActive() {
-        if(hiddenPassword) setHiddenPassword(false);
-        else setHiddenPassword(true);
-    }
+  function changePasswordActive() {
+    if (hiddenPassword) setHiddenPassword(false);
+    else setHiddenPassword(true);
+  }
 
   return (
     <div id="landing-page">
-      <ProffyPage/>
+      <ProffyPage />
 
       <div className="login">
         <div className="login-form">
@@ -31,31 +30,49 @@ const Login = () => {
             <fieldset>
               <input type="email" placeholder="E-mail" />
               <div>
-                {hiddenPassword ? 
-                    <img src={showPassword} alt="" onClick={changePasswordActive}/> 
-                    :  <img src={hidePassword} alt="" className="hidePass" onClick={changePasswordActive}/>}
-                
-                {hiddenPassword ? <input type="password" placeholder="Senha"/> : <input type="text" placeholder="Senha"/>}
+                {hiddenPassword ? (
+                  <img
+                    src={showPassword}
+                    alt="Show Password"
+                    onClick={changePasswordActive}
+                  />
+                ) : (
+                  <img
+                    src={hidePassword}
+                    alt="Hide Password"
+                    className="hidePass"
+                    onClick={changePasswordActive}
+                  />
+                )}
+
+                {hiddenPassword ? (
+                  <input type="password" placeholder="Senha" />
+                ) : (
+                  <input type="text" placeholder="Senha" />
+                )}
               </div>
             </fieldset>
             <section className="form-footer">
               <div>
-                <label htmlFor="rememberMe">Lembrar-me
-                    <input type="checkbox" id="rememberMe"/>
-                    <span className="checkmark"></span>
+                <label htmlFor="rememberMe">
+                  Lembrar-me
+                  <input type="checkbox" id="rememberMe" />
+                  <span className="checkmark"></span>
                 </label>
               </div>
               <Link to="/forgot-password">
                 <a href="#">Esqueci minha senha</a>
               </Link>
             </section>
-            <button type="submit">Entrar</button>
+            <Link to="/home">
+              <button type="submit">Entrar</button>
+            </Link>
           </form>
           <div className="footer">
             <div>
               <p>Não tem uma conta?</p>
               <Link to="/sign-up">
-                  <a href="#">Cadastre-se</a>
+                <a href="#">Cadastre-se</a>
               </Link>
             </div>
             <div>

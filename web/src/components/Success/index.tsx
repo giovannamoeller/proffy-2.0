@@ -11,7 +11,7 @@ interface SuccessProps {
     description: string;
 }
 
-const SuccessCadastro: React.FC<SuccessProps> = (props) => {
+const Success: React.FC<SuccessProps> = (props) => {
 
   return (
     <div id="landing" style={{ backgroundImage: `url(${background})` }}>
@@ -28,4 +28,4 @@ const SuccessCadastro: React.FC<SuccessProps> = (props) => {
   );
 };
 
-export default SuccessCadastro;
+export default Success;
