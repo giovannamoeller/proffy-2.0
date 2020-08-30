@@ -21,7 +21,8 @@
   padding: 1.2rem 1.6rem;
   resize: vertical;
   margin-top: 0.8rem;
-  font: 1.6rem Archivo;
+  font: 300 1.4rem Poppins;
+  color: var(--color-text-base);
 }
 
 /*  .textarea-block:focus-within::after {

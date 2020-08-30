@@ -9,7 +9,8 @@ const SuccessCadastro = () => {
     <Success
       title="Cadastro Concluído"
       description="Agora você faz parte da plataforma da Proffy.
-      Tenha uma ótima experiência."/>
+      Tenha uma ótima experiência."
+      button="Fazer login"/>
   );
 };
 

@@ -37,7 +37,10 @@ const Landing = () => {
             </Link>
           </div>
           <div>
+            <Link to="/">
+
             <img src={logout} alt="Logout" />
+            </Link>
           </div>
         </div>
         <div id="page-landing-content">

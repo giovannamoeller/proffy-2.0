@@ -9,6 +9,7 @@ import "../../assets/styles/global.css";
 interface SuccessProps {
     title: string;
     description: string;
+    button: string;
 }
 
 const Success: React.FC<SuccessProps> = (props) => {
@@ -21,7 +22,7 @@ const Success: React.FC<SuccessProps> = (props) => {
         <p>{props.description}
         </p>
         <Link to='/'>
-          <a href="#">Fazer login</a>
+          <a href="#">{props.button}</a>
         </Link>
       </div>
     </div>

@@ -1,6 +1,6 @@
 .page-header-profile {
   background-color: var(--color-primary);
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   background-repeat: repeat;
@@ -40,7 +40,7 @@
 }
 
 .page-header-profile .header-content-profile {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-self: center;
   justify-content: center;
@@ -86,8 +86,6 @@
       justify-items: center;
       align-items: center;
   }
-
-  
 }
 
 .header-content-profile img {
@@ -118,6 +116,17 @@
 #page-teacher-form main fieldset {
   border: 0;
   padding: 0 2.4rem;
+}
+
+#page-teacher-form fieldset .form-grid-normal{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+#page-teacher-form fieldset .form-grid-bigger{
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
 }
 
 #page-teacher-form main fieldset + fieldset {
@@ -160,6 +169,7 @@
   justify-content: center;
   font-size: 1.4rem;
   line-height: 2.4rem;
+  font-weight: 300;
   color: var(--color-text-complement);
 }
 
