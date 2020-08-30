@@ -68,7 +68,7 @@ const Login = () => {
               <button type="submit">Entrar</button>
             </Link>
           </form>
-          <div className="footer">
+          <div className="footer-login">
             <div>
               <p>Não tem uma conta?</p>
               <Link to="/sign-up">
