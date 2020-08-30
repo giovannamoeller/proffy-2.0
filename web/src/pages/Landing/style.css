@@ -17,11 +17,17 @@
     align-content: center;
 }
 
-.header div:nth-child(1) {
+.header div:nth-child(1) a a {
     display: grid;
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
+}
+
+.header div:nth-child(1) a{
     align-items: center;
-    font-weight: 400;
+    font-weight: 400;   
+    text-decoration: none;
+    gap: 20px;
+    color: white;
 }
 
 .header div:nth-child(1) img {
@@ -113,8 +119,16 @@
 
 .footer .buttons-container .study:nth-child(1) {
     background-color: var(--color-primary);
+    transition: 0.2s;
+}
+.footer .buttons-container .study:nth-child(1):hover {
+    background-color: var(--color-primary-dark);
 }
 .footer .buttons-container .study:nth-child(2) {
+    transition: 0.2s;
     background-color: var(--color-secundary);
+}
+.footer .buttons-container .study:nth-child(2):hover {
+    background-color: var(--color-secundary-dark);
 }
 

@@ -8,6 +8,7 @@ import Cadastro from './pages/Cadastro';
 import SuccessCadastro from './pages/Success-Cadastro';
 import ForgotPassword from './pages/ForgotPassword';
 import SuccessForgotPassword from './pages/Success-ForgotPassword';
+import Profile from './pages/Profile';
 
 export default function Routes() {
     return(
@@ -20,6 +21,7 @@ export default function Routes() {
             <Route path="/success-sign-up" component={SuccessCadastro} exact/>
             <Route path="/forgot-password" component={ForgotPassword} exact/>
             <Route path="/success-forgot-password" component={SuccessForgotPassword} exact/>
+            <Route path="/profile" component={Profile} exact/>
         </BrowserRouter>
     )
 }

@@ -26,11 +26,15 @@ const Landing = () => {
       <div className="content">
         <div className="header">
           <div>
-            <img
-              src="https://avatars1.githubusercontent.com/u/47362960?s=460&u=99702db3dedab50f47b0f151acea1e2e9db1b3fc&v=4"
-              alt="Me"
-            />
-            <p>Giovanna Moeller</p>
+            <Link to="/profile">
+                <a href="#">
+                    <img
+                    src="https://avatars1.githubusercontent.com/u/47362960?s=460&u=99702db3dedab50f47b0f151acea1e2e9db1b3fc&v=4"
+                    alt="Me"
+                    />
+                    <p>Giovanna Moeller</p>
+                </a>
+            </Link>
           </div>
           <div>
             <img src={logout} alt="Logout" />

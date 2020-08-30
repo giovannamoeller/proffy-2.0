@@ -7,11 +7,20 @@
 
 .page-header .top-bar-container {
     display: flex;
-    width: 90%;
-    margin: 0 auto;
+    min-width: 100%;
     justify-content: space-between;
     align-items: center;
     color: var(--color-text-in-primary);
+    padding: 8px 32px;
+    background-color: var(--color-primary-dark);
+    border-bottom: 1px solid var(--color-primary-darker)
+}
+
+.page-header .top-bar-container p {
+    font-family: Archivo;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
 }
 
 .page-header .top-bar-container a {
