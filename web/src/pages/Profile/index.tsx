@@ -85,7 +85,7 @@ function Profile() {
                 value="giovannagmoeller@gmail.com"
               />
 
-              <Input name="whatsapp" label="Whatsapp" value="(14) 99129-3534" />
+              <Input name="whatsapp" label="Whatsapp" value="(14) 99999-9999" />
             </div>
 
             <Textarea
@@ -112,7 +112,6 @@ function Profile() {
                   { value: "Matemática", label: "Matemática" },
                   { value: "Química", label: "Química" },
                 ]}
-                value="Matemática"
               />
               <Input name="price" label="Custo da sua hora por aula" value="R$ 80,00" />
             </div>
@@ -167,6 +166,7 @@ function Profile() {
                 </div>
               );
             })}
+            <p>Excluir horário</p>
           </fieldset>
 
           <footer>

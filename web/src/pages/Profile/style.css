@@ -116,6 +116,36 @@
 #page-teacher-form main fieldset {
   border: 0;
   padding: 0 2.4rem;
+  position: relative;
+}
+
+#page-teacher-form main fieldset p {
+  color: #E33D3D;
+  font-family: Archivo;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+#page-teacher-form main fieldset p::before {
+  content: '';
+  height: 1px;
+  width: 200px;
+  background-color: #E6E6F0;
+  position: absolute;
+  bottom: 8px;
+  left: 10%;
+}
+#page-teacher-form main fieldset p::after {
+  content: '';
+  height: 1px;
+  width: 200px;
+  background-color: #E6E6F0;
+  position: absolute;
+  bottom: 8px;
+  right: 10%;
 }
 
 #page-teacher-form fieldset .form-grid-normal{
@@ -127,6 +157,7 @@
   display: grid;
   grid-template-columns: 1.8fr 1fr;
   gap: 40px;
+  align-items: center;
 }
 
 #page-teacher-form main fieldset + fieldset {
@@ -140,7 +171,6 @@
 }
 
 #page-teacher-form main input {
-  margin-bottom: 1.6rem;
 }
 
 #page-teacher-form main fieldset legend {
@@ -233,10 +263,11 @@
 
     #page-teacher-form main footer button {
         width: 50%;
-        margin-top: 0   ;
+        margin-top: 0;
     }
 
     #page-teacher-form main footer p {
+      margin-right: 1rem;
         justify-content: space-between;
         font-size: 1.2rem;
     }

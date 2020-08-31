@@ -1,4 +1,6 @@
 import React, {SelectHTMLAttributes} from "react";
+import Select from 'react-select';
+
 import './style.css';
 
 interface InputProps extends SelectHTMLAttributes<HTMLSelectElement> {
@@ -10,20 +12,14 @@ interface InputProps extends SelectHTMLAttributes<HTMLSelectElement> {
     }>;
 }
 
-const Select:React.FC<InputProps> = ({label, name, options, ...rest}) => {
+const SelectComponent:React.FC<InputProps> = ({label, name, options, ...rest}) => {
+
   return (
     <div className="select-block">
       <label htmlFor={name}>{label}</label>
-      <select value="" id={name} {...rest}>
-        <option value="" disabled hidden>Selecione uma opção</option>
-        {options.map(option => {
-          return (
-            <option key={option.value} value={option.value}>{option.label}</option>
-          )
-        })}
-      </select>
+      <Select className="select" options={options}/>
     </div>
   );
 }
 
-export default Select;
+export default SelectComponent;

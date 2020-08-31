@@ -12,6 +12,7 @@ import ProffyPage from "../../components/ProffyPage";
 import api from "../../services/api";
 
 const Login = () => {
+
   const [hiddenPassword, setHiddenPassword] = useState(true);
 
   function changePasswordActive() {

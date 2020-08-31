@@ -3,29 +3,26 @@
 }
 
 .select-block + .select-block {
-  margin-top: 1.4rem;
 }
 
 .select-block:last-child {
-  margin-bottom: 2rem;
 }
 
-.select-block select {
+.select-block select  {
   border-radius: 8px;
   background-color: var(--color-box-footer);
   border: none;
   border: 1px solid #e6e6f0;
   width: 100%;
-  height: 5.4rem;
+  height: 3rem !important;
   outline: 0;
-  padding: 1.2rem 1.6rem;
-  margin-top: 0.8rem;
-  font: 1.6rem Archivo;
-  margin-bottom: 1.6rem;
+  padding: 0 1.6rem;
+  font: 300 1.4rem Poppins;
+  color: var(--color-text-base);
 }
 
 /*  .select-block:focus-within::after {
-  textarea-block quanto tiver focus no input 
+  select-block quanto tiver focus no select 
   width: 80%;
   text-align: center;
   height: 0.5px;

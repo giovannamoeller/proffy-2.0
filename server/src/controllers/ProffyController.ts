@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import knex from "../database/connection";
 import convertHourToMinutes from "../utils/convertHourToMinutes";
+import bcrypt from 'bcrypt';
 
 interface ScheduleItem {
   week_day: number;
@@ -9,6 +10,33 @@ interface ScheduleItem {
 }
 
 const Proffy = {
+  async createUser(req: Request, res: Response) {
+    const {
+      name,
+      last_name, 
+      email, 
+      password
+    } = req.body;
+    console.log(req.body);
+    const trx = await knex.transaction();
+    try {
+      const user = await trx("users").insert({name, last_name, email, password: await bcrypt.hash(password, 8)}).returning('*');
+      console.log(user);
+
+      const userId = user[0].id;
+      console.log(userId);
+
+      await trx.commit();
+
+
+      return res.status(200).send(user);
+
+    } catch(err) {
+      console.log(err)
+      return res.status(400).json(err);
+    }
+  },
+
   async create(req: Request, res: Response) {
     const {
       name,
