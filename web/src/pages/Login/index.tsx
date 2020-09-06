@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import showPassword from "../../assets/images/icons/show-password.svg";
 import hidePassword from "../../assets/images/icons/hide-password.svg";
@@ -12,12 +12,29 @@ import ProffyPage from "../../components/ProffyPage";
 import api from "../../services/api";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const history = useHistory();
+
 
   const [hiddenPassword, setHiddenPassword] = useState(true);
 
   function changePasswordActive() {
     if (hiddenPassword) setHiddenPassword(false);
     else setHiddenPassword(true);
+  }
+
+  function login(e: FormEvent) {
+    e.preventDefault();
+    api.post('/login', {
+      email,
+      password
+    }).then(() => {
+      history.push('/home')
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
   return (
@@ -27,9 +44,16 @@ const Login = () => {
       <div className="login">
         <div className="login-form">
           <h1>Fazer login</h1>
-          <form action="">
+          <form onSubmit={login}>
             <fieldset>
-              <input type="email" placeholder="E-mail" />
+              <input
+                type="email"
+                placeholder="E-mail"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
               <div>
                 {hiddenPassword ? (
                   <img
@@ -47,9 +71,23 @@ const Login = () => {
                 )}
 
                 {hiddenPassword ? (
-                  <input type="password" placeholder="Senha" />
+                  <input
+                    type="password"
+                    placeholder="Senha"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
                 ) : (
-                  <input type="text" placeholder="Senha" />
+                  <input
+                    type="text"
+                    placeholder="Senha"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
                 )}
               </div>
             </fieldset>
@@ -62,18 +100,16 @@ const Login = () => {
                 </label>
               </div>
               <Link to="/forgot-password">
-                <a href="#">Esqueci minha senha</a>
+                Esqueci minha senha
               </Link>
             </section>
-            <Link to="/home">
-              <button type="submit">Entrar</button>
-            </Link>
+            <button type="submit">Entrar</button>
           </form>
           <div className="footer-login">
             <div>
               <p>Não tem uma conta?</p>
               <Link to="/sign-up">
-                <a href="#">Cadastre-se</a>
+                Cadastre-se
               </Link>
             </div>
             <div>

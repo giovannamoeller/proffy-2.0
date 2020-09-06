@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import knex from "../database/connection";
 import convertHourToMinutes from "../utils/convertHourToMinutes";
-import bcrypt from 'bcrypt';
+import bcrypt, { compare } from 'bcrypt';
 
 interface ScheduleItem {
   week_day: number;
@@ -23,18 +23,35 @@ const Proffy = {
       const user = await trx("users").insert({name, last_name, email, password: await bcrypt.hash(password, 8)}).returning('*');
       console.log(user);
 
-      const userId = user[0].id;
-      console.log(userId);
-
       await trx.commit();
 
-
-      return res.status(200).send(user);
+      return res.status(200).json(user);
 
     } catch(err) {
-      console.log(err)
       return res.status(400).json(err);
     }
+  },
+
+  async login(req: Request, res: Response) {
+    const { email, password } = req.body;
+
+    try {
+      const findUser= await knex('users').where({email})
+
+      if(!findUser) throw Error('Incorrect email');
+      
+      const userPassword = findUser[0].password;
+
+      const comparePassword = await compare(password, userPassword);
+
+      if(!comparePassword) throw Error('Incorrect password');
+
+      return res.status(200).json(findUser);
+
+    } catch(err) {
+      return res.status(400).json(err);
+    }
+
   },
 
   async create(req: Request, res: Response) {
